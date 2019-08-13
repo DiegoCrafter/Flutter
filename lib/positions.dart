@@ -19,13 +19,20 @@ class _PositionToolbarState extends State<PositionToolbar>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+  
       body: NestedScrollView(
         headerSliverBuilder: (BuildContext context, bool boxIsScrolled) {
           return <Widget>[
             SliverAppBar(
+              elevation: 50,
               expandedHeight: 80,
               centerTitle: true,
-              title: Text('Standings'),
+              title: Container(
+                  width: 400,
+                  height: 18,
+                  child: Text("Puntuaciones"),
+                  margin: EdgeInsets.only(top: 25),
+              ),
               pinned: true,
               floating: false,
               backgroundColor: Color.fromARGB(255, 153, 46, 69),
@@ -62,7 +69,7 @@ class PageOne extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Color.fromARGB(30, 153, 46, 69),
+      color: Color.fromARGB(10, 153, 46, 69),
       child: ListView.builder(
       itemExtent: 260.0,
       itemBuilder: (context, index) => Container(
@@ -70,8 +77,8 @@ class PageOne extends StatelessWidget {
             child: Material(
               elevation: 4.0,
               borderRadius: BorderRadius.circular(5.0),
-              color: index % 2 == 0 ? Colors.white : Colors.white,
-              child: new DataTable(
+              child: new Container(
+                child: DataTable(
                 onSelectAll: (b){},
                 sortAscending: false,
                 columns: <DataColumn>[
@@ -83,15 +90,18 @@ class PageOne extends StatelessWidget {
                     label: Text("V"),
                     numeric: true,
                   ),
-              
+                  DataColumn(
+                    label: Text("V"),
+                    numeric: true,
+                  ),
                   DataColumn(
                     label: Text("Pts."),
                     numeric: true
                   )
                 ],
                 rows: names.map((name) => DataRow(
+                  selected: true,
                   cells: [
-
                     DataCell(
                       Text(name.firstName, style: TextStyle(color: Colors.black), textAlign: TextAlign.start,),
                       showEditIcon: false,
@@ -109,7 +119,8 @@ class PageOne extends StatelessWidget {
                     )
                     ]
                   )
-                ).toList()
+                )
+              ),
               )
             ),
           ),

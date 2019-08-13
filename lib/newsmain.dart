@@ -24,12 +24,10 @@ class NewsMain extends StatelessWidget{
                 Container(
                   width: 400,
                   height: 120,
-                  color: Color.fromARGB(50, 153, 46, 69),
                 ),
                 Container( 
                   height: 200,
                   width: 400,
-                  color: Color.fromARGB(50, 153, 46, 69),
                   child: ListView(
                     children: <Widget>[
                       News("assets/img/travel.jpg","Hakuna Matata","2","There is amazing Peru"),

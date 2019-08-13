@@ -44,9 +44,10 @@ class CardImage extends StatelessWidget{
           ),
           Container(
             margin: EdgeInsets.only(
-              top: 25.0
+              top: 10.0,
+              bottom: 10.0
             ),
-            child: Text("Ver details", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
+            child: Text("Ver detalles", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
           )
         ],
       ),

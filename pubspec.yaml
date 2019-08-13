@@ -70,3 +70,12 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.io/custom-fonts/#from-packages
+
+  fonts:
+      - family: ball
+        fonts: 
+          - asset: assets/fonts/ic_ball.ttf
+          
+      - family: team
+        fonts:
+          - asset: assets/fonts/ic_team.ttf

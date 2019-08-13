@@ -13,16 +13,16 @@ class PartidoMain extends StatelessWidget{
           children: <Widget>[
             Column(
               children: <Widget>[
-                Container(
-                  color: Color.fromARGB(50, 153, 46, 69),
+                SizedBox(
                   height: 290,
                 ),
                 Container(
                   height: 300,
-                  color: Color.fromARGB(50, 153, 46, 69),
+                  color: Color.fromARGB(10, 153, 46, 69),
                   child: ListView(
                     children: <Widget>[
-                      PartidoList()
+                      PartidoList(),
+                      PartidoList(),
                     ],
                   )
                 ),

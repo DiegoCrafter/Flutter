@@ -13,7 +13,6 @@ class PartidoList extends StatelessWidget{
         ),
         new Partido ("assets/img/travel.jpg","Hakuna Matata","2","There is amazing Peru"),
         new Partido ("assets/img/travel.jpg","Ann","2","Ann"),
-    
       ],
     );
   }

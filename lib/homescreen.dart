@@ -11,6 +11,7 @@ class HomeScreen extends StatelessWidget{
   Widget build(BuildContext context) {
     // TODO: implement build
     return MaterialApp(
+      initialRoute: "NewsMain",
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         bottomNavigationBar: CupertinoTabScaffold(tabBar: CupertinoTabBar(
@@ -20,15 +21,15 @@ class HomeScreen extends StatelessWidget{
           title: Text("Noticias")
         ),
         BottomNavigationBarItem(
-          icon: Icon(CupertinoIcons.music_note, color: Color.fromARGB(255, 153, 46, 69)),
+          icon: Icon(const IconData(0xe900, fontFamily: 'ball'), color: Color.fromARGB(255, 153, 46, 69)),
           title: Text("Partidos")
         ),
         BottomNavigationBarItem(
-          icon: Icon(CupertinoIcons.share_up, color: Color.fromARGB(255, 153, 46, 69)),
+          icon: Icon(CupertinoIcons.person, color: Color.fromARGB(255, 153, 46, 69)),
           title: Text("Equipos")
             ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.tab_unselected, color: Color.fromARGB(255, 153, 46, 69)),
+          icon: Icon(const IconData(0xe903, fontFamily: 'ball'), color: Color.fromARGB(255, 153, 46, 69)),
           title: Text("Posiciones")
             ),
           ],

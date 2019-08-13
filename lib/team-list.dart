@@ -31,13 +31,11 @@ class _TeamListState extends State<TeamList> {
                   messageData[i].name,
                   style: new TextStyle(fontWeight: FontWeight.bold),
                 ),
-                Icon(
-                  Icons.star_border
-                )
+                Icon(Icons.star),
               ],),
               onTap: (){
                 var route  = new MaterialPageRoute(
-                  builder: (BuildContext context) => new TeamDetail(name: messageData[i].name)
+                  builder: (BuildContext context) => new TeamDetail()
                 );
                 Navigator.of(context).push(route);
               },

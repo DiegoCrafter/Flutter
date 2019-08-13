@@ -25,7 +25,12 @@ class _TeamsState extends State<Teams>
           return <Widget>[
             SliverAppBar(
               expandedHeight: 40,
-              title: Text('Equipos'),
+              title: Container(
+                  width: 400,
+                  height: 18,
+                  child: Text("Equipos"),
+                  margin: EdgeInsets.only(top: 25),
+              ),
               centerTitle: true,
               pinned: true,
               floating: false,
@@ -41,9 +46,6 @@ class _TeamsState extends State<Teams>
                   Tab(
                     text: "Voley",
                   ),
-                  Tab(
-                    text: "Sudoku",
-                  )
                 ],
                 controller: _tabController,
               ),
